@@ -1,0 +1,1 @@
+Esse é o repositório do curso de Apache Kafka da FullCycle.
