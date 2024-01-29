@@ -2,6 +2,14 @@ version: "3"
 
 services:
 
+  app:
+    build: .
+    container_name: gokafka
+    volumes:
+      - .:/go/src/
+    extra_hosts: #Conseguimos nos comunicar com qualquer container sem que seja necessário criarmos várias networks.
+      - "host.docker.internal:172.17.0.1"
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     environment:
